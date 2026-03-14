@@ -1,7 +1,9 @@
+import EditProfile from "./EditProfile";
+
 const Profile = (()=>{
     return (
         <div>
-            <h1>Profile</h1>
+            <EditProfile />
         </div>
     )
 });
