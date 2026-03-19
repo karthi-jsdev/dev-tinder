@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from "../utils/constants";
 import UserCard from "./userCard";
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice';
 const EditProfile = ({ user }) => {
+    const dispatch = useDispatch();
     const [formData, setFormData] = useState({
         firstName: user?.firstName || "",
         lastName: user?.lastName || "",
@@ -21,6 +24,7 @@ const EditProfile = ({ user }) => {
         try {
             const res = await axios.patch(BASE_URL + '/profile/edit', formData,{ withCredentials: true });
             console.log(res);
+            dispatch(addUser(res.data.data))
         } catch (err) {
             console.log(err);
         }
