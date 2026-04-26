@@ -8,6 +8,8 @@ import Profile from './Profile'
 import { Provider } from "react-redux";
 import appStore from "../utils/appStore";
 import Feed from './Feed';
+import Connections from './Connections'
+import Requests from './Requests'
 function App() {
   const router = createBrowserRouter([
     {
@@ -34,6 +36,12 @@ function App() {
         }, {
           path: "/profile",
           element: <Profile />,
+        }, {
+          path: "/connections",
+          element: <Connections />,
+        }, {
+          path: "/requests",
+          element: <Requests />,
         }
       ],
     },
