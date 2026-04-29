@@ -10,3 +10,15 @@
 - install node version v20.19.6 
 - git clone repo 
     https://github.com/karthi-jsdev/dev-tinder.git
+
+frontend -
+- npm install - install dependencies     
+- npm run build
+- sudo apt update
+- sudo apt install nginx
+- sudo systemctl start nginx
+- sudo systemctl enable nginx
+- copy code from dist(build files) to /var/www/html/
+- sudo scp -r dist/* /var/www/html/
+- enable the port 80
+    add the rule in the security group -> inbound rules

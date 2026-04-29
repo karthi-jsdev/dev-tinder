@@ -1,4 +1,5 @@
 
+import '../app.css'
 import Body from './Body'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './Login'
