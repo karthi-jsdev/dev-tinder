@@ -90,6 +90,12 @@ nginx -
     - Verify email address
     - install AWS SDK -v3
     code Example - https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code/ses#code-examples
+    - setup sesClient
+    - Access Credentials should be created in IAM under SecurityCredentials Tab
+    - Add the credentials to the env file
+    - write code for SESClient
+    - write code fpr Sendingemail Address
+    - Make the3 email dynamic by passing more params to the run funciton
 
     https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/getting-started-nodejs.html
 
