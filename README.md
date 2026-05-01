@@ -68,3 +68,28 @@ nginx -
     }
 
     sudo systemctl restart nginx
+
+    =============================================================================================================
+    Adding Custom Domain Name
+    =============================================================================================================
+    - purchased domain name from godaddy
+    - signup on cloudflare and add a new domain name on cloudflare
+    - change the nameservers on godaddy and point it to cloud flare
+    - wait for sometime till your nameservers are updated(approx 15 mins it will take)
+    - DNS record: A devtinder.in, 16.171.37.141
+    - enable ssl in cloudflare to the website
+
+
+    =============================================================================================================
+    Sending Emails via SES
+    =============================================================================================================
+    - Create a IAM user
+    - Give Acccess to AmazonSESFull Access
+    - Create and Identity in Amazon SES
+    - Verify your domain name
+    - Verify email address
+    - install AWS SDK -v3
+    code Example - https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code/ses#code-examples
+
+    https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/getting-started-nodejs.html
+

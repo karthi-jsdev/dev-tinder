@@ -48,11 +48,11 @@ requestRouter.post(
 
       const data = await connectionRequest.save();
 
-      // const emailRes = await sendEmail.run(
-      //   "A new friend request from " + req.user.firstName,
-      //   req.user.firstName + " is " + status + " in " + toUser.firstName
-      // );
-      // console.log(emailRes);
+      const emailRes = await sendEmail.run(
+        "A new friend request from " + req.user.firstName,
+        req.user.firstName + " is " + status + " in " + toUser.firstName
+      );
+      console.log(emailRes);
 
       res.json({
         message:
@@ -77,8 +77,8 @@ requestRouter.post(
       if (!allowedStatus.includes(status)) {
         return res.status(400).json({ messaage: "Status not allowed!" });
       }
-      console.log(requestId);
-      console.log(loggedInUser._id);
+      // console.log(requestId);
+      // console.log(loggedInUser._id);
       const connectionRequest = await ConnectionRequest.findOne({
         fromUserId: requestId,
         toUserId: loggedInUser._id,
