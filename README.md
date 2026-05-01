@@ -22,3 +22,49 @@ frontend -
 - sudo scp -r dist/* /var/www/html/
 - enable the port 80
     add the rule in the security group -> inbound rules
+- modifty the BASEURL in frontend project to "/api"    
+
+ backend - 
+- inside the folder install all the dependencies
+    npm install
+- add the ip address in mongodb network access
+- add the .env file with the mongodb credentials
+- in the aws console add the backend port(7777) in the security group -> inbound rules
+
+
+pm2 installation -
+    process manager
+    need to install this run the node application in aws server
+    - npm install pm2 -g 
+    - pm2 start npm -- start
+    - pm2 logs
+    - pm2 list
+    - pm2 flush<name>
+    - pm2 stop<name> 
+    - pm2 delete<name>
+    - pm2 stop<name> 
+    - pm2 start npm --name "devtinder-backend" -- start
+
+Database - 
+    mongodb -> network access -> add the IP Access List
+        localip
+        aws public ipv4(http://16.171.37.141/)
+
+nginx - 
+    edit the nginx for the proxy pass
+    nginx proxy pass /api to 7777 node application
+    path - sudo nano etc/nginx/sites-available/default
+    =============================================================================================================
+    nginx config file update
+    =============================================================================================================
+    server_name http://16.171.37.141
+    location /api/ {
+        proxy_pass http://localhost:7777/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    sudo systemctl restart nginx
