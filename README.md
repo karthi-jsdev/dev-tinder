@@ -99,3 +99,33 @@ nginx -
 
     https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/getting-started-nodejs.html
 
+    =============================================================================================================
+    Schduling Cron jobs
+    =============================================================================================================
+    - installing node-cron
+    - Learning about cron expressions synax - crontab.guru
+    - Schedule a job
+    - date-fns
+    - find all the unique email Id who have got connection Request in previous day
+    - Send Email
+    - Explore queue mechanism to send bulk emails
+    - Amazon SES Bulk Emails
+    - Make sendEmail funcion dynamic
+    - bee-queue  & bull npm packages
+    ==============================================================================================================
+    Razorpay
+    ==============================================================================================================
+    - signup on razorpay & complete KYC
+    - Cerates a UI for premium page
+    - Creating an API for create order in backend
+    - added my key and secret in env file
+    - Initialize Razorpay in Utils
+    - creating order on Razorpay
+    - create Schema and model 
+    - saved the order in payment collection
+    - make the API dynamic
+
+    - Setup Razorpay webhook on your live api
+        https://16.171.37.141/api/payment/webhook
+        
+    https://razorpay.com/docs/payments/server-integration/nodejs/

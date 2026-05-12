@@ -10,6 +10,7 @@ import appStore from "../utils/appStore";
 import Feed from './Feed';
 import Connections from './Connections'
 import Requests from './Requests'
+import Premium from './Premium'
 function App() {
   const router = createBrowserRouter([
     {
@@ -42,6 +43,9 @@ function App() {
         }, {
           path: "/requests",
           element: <Requests />,
+        }, {
+          path: "/premium",
+          element: <Premium />,
         }
       ],
     },
