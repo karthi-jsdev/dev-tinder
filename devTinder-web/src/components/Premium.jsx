@@ -44,7 +44,7 @@ const Premium = () => {
     return (
         isUserPremium ? 'you are already a premium user' : <div className='flex min-h-screen justify-center items-center gap-10 bg-gray-100 p-10'>
 
-            
+
             <div className="hover-3d w-64 bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col items-center">
 
                 <img
@@ -63,12 +63,12 @@ const Premium = () => {
                     </button>
                 </div>
 
-            
+
                 <div></div><div></div><div></div><div></div>
                 <div></div><div></div><div></div><div></div>
             </div>
 
-            
+
             <div className="hover-3d w-64 bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col items-center border-2 border-yellow-400">
 
                 <img
@@ -91,7 +91,7 @@ const Premium = () => {
                 <div></div><div></div><div></div><div></div>
             </div>
 
-            
+
             <div className="hover-3d w-64 bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col items-center">
 
                 <img
