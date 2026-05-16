@@ -10,9 +10,14 @@ require("dotenv").config();
 require("./utils/cronjob");
 
 // ✅ CORS config
+// app.use(cors({
+//   origin: "http://localhost:5173",
+//   credentials: true,
+// }));
+
 app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true,
+  origin: true,
+  credentials: true
 }));
 
 // ✅ MUST be before routes
